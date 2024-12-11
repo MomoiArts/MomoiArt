@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momoi</title>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- feather icon -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- navbar start -->
+    <nav class="navbar">
+        <a href="" class="navbar-logo">Momoi<span>Art</span></a>
+        
+        <div class="navbar-extra">
+            <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        </div>
+
+        <div class="navbar-nav">
+            <a href="#home">Home</a>
+            <a href="#karya">Gallery</a>
+            <a href="#jasa">Jasa</a>
+            <a href="#kontak">Kontak</a>
+        </div>
+
+    </nav>
+    <!-- navbar end -->
+
+    <!-- hero section start -->
+    <section class="hero" id="home">
+        <main class="content">
+            <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+            <h1>Momoi Art</h1>
+            <p>ilustrator tampan yang membuat karya sesuai keinginan kalian dengan style yang menarik dan memanjakan mata!</p>
+            <a href="#" class="cta">Pesan Sekarang</a>
+            </div>
+        </main>
+    </section>
+    <!-- hero section wnd -->
+
+    <!-- Highlight section start -->
+    <section id="karya" class="karya">
+        <h2 class="left">Serpihan Karya</h2>
+        <p>Ini Merupakan Highlight Karya-Karya yang telah buat, Jika ingin Melihat semuanya klik menu Gallery ya!</p>
+
+        <div class="row" data-aos="fade-down">
+            <div class="column">
+                <div class="img-hover-zoom">
+                    <img src="img/01.jpeg" style="width: 100%;">
+                </div>
+                <div class="img-hover-zoom">
+                    <img src="img/02.jpeg" style="width: 100%;">
+                </div>
+
+            </div>
+
+            <div class="column">
+                <div class="img-hover-zoom">
+                    <img src="img/03.jpeg" style="width: 100%;">
+                </div>
+                <div class="img-hover-zoom">
+                    <img src="img/04.jpeg" style="width: 100%;">
+                </div>
+
+            </div>
+
+            <div class="column">
+                <div class="img-hover-zoom">
+                    <img src="img/05.jpeg" style="width: 100%;">
+                </div>
+
+                <div class="img-hover-zoom">
+                    <img src="img/06.jpeg" style="width: 100%;">
+                </div>
+
+            </div>
+
+            <div class="column">
+                <div class="img-hover-zoom">
+                    <img src="img/07.jpeg" style="width: 100%;">
+                </div>
+                <div class="img-hover-zoom">
+                    <img src="img/08.jpeg" style="width: 100%;">
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- Highlight section end -->
+
+    <!-- Produk sectio Start -->
+    <section id="jasa" class="jasa">
+        <h2 class="midle">Jasa</h2>
+        <p>Berikut adalah jasa yang kami sediakan, silakan dipesan~</p>
+
+        <div class="card-container" data-aos="fade-down">
+            <div class="card">
+                <img src="img/kepala.jpeg" alt="">
+                <div class="card-content">
+                    <h3>Icon</h3>
+                    <p>Menawarkan ilustrasi untuk bagian icon atau kepala sampai leher, pada bagian ini akan fokus kepada bagian mata yang indah dan ekspresi wajah yang jelas.
+                    </p>
+                </div>
+                <div class="cart">
+                    <span>Rp. 120K</span>
+                    <a id="wa-link-icon" href="https://wa.me/628568650282" class="btn" target="_blank">Pesan</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/halfbody.jpeg" alt="">
+                <div class="card-content">
+                    <h3>Half Body</h3>
+                    <p>Menawarkan ilustrasi bagian kepala hingga pinggang, bisa menambahkan gerak tangan dan membuat bagian pakaian terlihat indah.
+                    </p>
+                </div>
+                <div class="cart">
+                    <span>Rp. 180K</span>
+                    <a id="wa-link-half" href="https://wa.me/628568650282" class="btn" target="_blank">Pesan</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/fullbody.jpeg" alt="" style="height: 50%;">
+                <div class="card-content">
+                    <h3>Full Body</h3>
+                    <p>Menawarkan bagian dari kepala hingga ujung kaki, bisa diberikan berbagai pose yang menarik.
+                    </p>
+                </div>
+                <div class="cart">
+                    <span>Rp. 250K</span>
+                    <a id="wa-link-full" href="https://wa.me/628568650282" class="btn" target="_blank">Pesan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function updateWhatsApplink(productName, linkId){
+            const message = `Halo Momoi, Saya ingin memesan jasa gambar ukuran bagian ${productName} dong`;
+            const waLink = `https://wa.me/628568650282?text=${encodeURIComponent(message)}`;
+            document.getElementById(linkId).href = waLink;
+        }
+
+        updateWhatsApplink('Icon', `wa-link-icon`);
+        updateWhatsApplink('Half Body', `wa-link-half`);
+        updateWhatsApplink('Full Body', `wa-link-full`);
+    </script>
+    <!-- Produk section end -->
+
+    <!-- contact section start -->
+    <section id="kontak" class="kontak">
+        <h2 class="right">Kontak Kami</h2>
+        <p>Berkenalan lebih jauh dengan kami dengan social media yuk ~</p>
+
+        <div class="Qr" data-aos="fade-down">
+            <img src="img/qrcode.png" alt="">
+        </div>
+
+        <div class="prg" data-aos="fade-down">
+            <p>Atau bisa Klik dibawah ini</p>
+            <a href="https://linktr.ee/momoiart" target="_blank">
+            <i data-feather="link" style="width: 25px; margin-bottom: -7px;"></i>
+            Social Media Kami
+            </a>
+        </div>
+
+    </section>
+    <!-- contact section end -->
+
+    <!-- footer section start -->
+    <footer>
+
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+        </div>
+
+        <div class="socials">
+            <a href=""><i data-feather="github"></i></a>
+        </div>
+
+        <div class="links">
+            <a href="#home">Home</a>
+            <a href="#karya">Karya Kami</a>
+            <a href="#jasa">Jasa</a>
+            <a href="#kontak">Kontak</a>
+        </div>
+
+        <div class="credit">
+            <p>Created by <a href="#">MomoiArt</a> | &copy; 2024.</p>
+        </div>
+    </footer>
+    <!-- footer section end -->
+
+    <!-- animated on scroll aos -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 1000,
+        });
+    </script>
+
+    <!-- feather icons -->
+    <script>
+        feather.replace();
+    </script>
+
+    <!-- My javascript -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -360,7 +360,7 @@ footer .links {
 
 footer .links a {
     color: var(--bg);
-    padding: 0.7rem 1rem;
+    padding: 0.7rem 0.5rem;
 }
 
 footer .credit {
